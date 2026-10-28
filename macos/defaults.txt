@@ -1,0 +1,25 @@
+# macOS settings applied by setup.sh (one per line):
+# <domain>|<key>|<type: bool, int, float, string>|<value>|<label>
+# Values are taken from the Mac this file was created on.
+
+# Keyboard
+NSGlobalDomain|KeyRepeat|float|2|キーリピートの速度（小さいほど速い）
+NSGlobalDomain|InitialKeyRepeat|float|15|キーリピート開始までの時間（小さいほど短い）
+
+# Text input
+NSGlobalDomain|NSAutomaticCapitalizationEnabled|bool|true|文頭を自動で大文字にする
+NSGlobalDomain|NSAutomaticPeriodSubstitutionEnabled|bool|true|スペース2回でピリオドを入力する
+
+# Trackpad (built-in and Magic Trackpad)
+NSGlobalDomain|com.apple.trackpad.scaling|float|3|トラックパッドの移動速度
+com.apple.AppleMultitouchTrackpad|Clicking|bool|true|タップでクリック（内蔵）
+com.apple.driver.AppleBluetoothMultitouch.trackpad|Clicking|bool|true|タップでクリック（外付け）
+com.apple.AppleMultitouchTrackpad|TrackpadRightClick|bool|true|2本指で右クリック（内蔵）
+com.apple.driver.AppleBluetoothMultitouch.trackpad|TrackpadRightClick|bool|true|2本指で右クリック（外付け）
+com.apple.AppleMultitouchTrackpad|TrackpadThreeFingerDrag|bool|false|3本指でドラッグ（内蔵）
+com.apple.driver.AppleBluetoothMultitouch.trackpad|TrackpadThreeFingerDrag|bool|false|3本指でドラッグ（外付け）
+
+# Dock
+com.apple.dock|autohide|bool|true|Dockを自動で隠す
+com.apple.dock|orientation|string|right|Dockの位置
+com.apple.dock|wvous-br-corner|int|14|ホットコーナー右下（14 = クイックメモ）

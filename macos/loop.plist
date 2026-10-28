@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>accentColorMode</key>
+	<string>0</string>
+	<key>animationConfiguration</key>
+	<integer>2</integer>
+	<key>currentIcon</key>
+	<string>AppIcon-Rose Pine</string>
+	<key>keybinds</key>
+	<array>
+		<string>{"direction":"NoAction","id":"62B88B05-5D5F-4B87-B688-665A09315C1B","keybind":[]}</string>
+		<string>{"bypassTriggerKey":false,"direction":"Maximize","id":"3E187A00-AD4D-4ED6-8D28-3909B7CE5D5F","keybind":[46]}</string>
+		<string>{"direction":"Center","id":"C62DF7F0-0B9D-49CE-B5E5-5BBC57F50D1F","keybind":[36]}</string>
+		<string>{"bypassTriggerKey":false,"cycle":[{"direction":"TopHalf","id":"A69D4CDD-8681-4D2D-B7BF-E8BE11709393","keybind":[]},{"direction":"TopThird","id":"345CA52D-4736-42B5-9058-9B456EAE09C6","keybind":[]},{"direction":"TopTwoThirds","id":"02A2DD31-D4DC-402F-8B73-C7B87C40424D","keybind":[]}],"direction":"Cycle","id":"11C3E19B-7451-4639-A6A0-902B5BDB3FA8","keybind":[35],"name":"上部繰り返し"}</string>
+		<string>{"cycle":[{"direction":"BottomHalf","id":"6CAF3D60-52D3-4342-849B-30D2BB0B645F","keybind":[]},{"direction":"BottomThird","id":"C21551CC-0098-488A-8167-406DBF31A1D6","keybind":[]},{"direction":"BottomTwoThirds","id":"7CABF202-DCF2-4B95-8FA3-200F87A035F5","keybind":[]}],"direction":"Cycle","id":"CE0A7C95-5D31-4DD3-A2C8-9FC4E4B85E99","keybind":[45],"name":"下部繰り返し"}</string>
+		<string>{"bypassTriggerKey":false,"cycle":[{"direction":"RightHalf","id":"94B37C0A-FC2F-4EAC-93B4-B894DE8CDD29","keybind":[]},{"direction":"RightThird","id":"C01746C3-4A30-4493-93DC-8796A3D27615","keybind":[]},{"direction":"RightTwoThirds","id":"61C0BD02-6B17-4C1D-B15B-237142F8BF72","keybind":[]}],"direction":"Cycle","id":"E86DFA40-4EF0-417A-8801-542C7AA45D53","keybind":[3],"name":"右部繰り返し"}</string>
+		<string>{"bypassTriggerKey":false,"cycle":[{"direction":"LeftHalf","id":"588896FF-580B-4843-B5EE-BEF018282283","keybind":[]},{"direction":"LeftThird","id":"4AEAE3F6-FCB9-44E7-8C9F-C55612DB6451","keybind":[]},{"direction":"LeftTwoThirds","id":"86C4F179-C57F-4773-A093-CBB0856F2639","keybind":[]}],"direction":"Cycle","id":"6B82D034-3BCF-485C-9D9A-4A0879A196C9","keybind":[11],"name":"左部繰り返し"}</string>
+		<string>{"direction":"TopLeftQuarter","id":"E69F1624-494C-478D-876D-F7C4C3D5EEE0","keybind":[126,123]}</string>
+		<string>{"direction":"TopRightQuarter","id":"0538D2B2-A5A5-49F3-AFE3-C6296BF2945B","keybind":[124,126]}</string>
+		<string>{"direction":"BottomRightQuarter","id":"4126B144-1F06-497D-8ACB-B4C59DC584A9","keybind":[125,124]}</string>
+		<string>{"direction":"BottomLeftQuarter","id":"D703D250-C4D2-45B1-A9EB-D04EDFFA6FEE","keybind":[123,125]}</string>
+	</array>
+	<key>launchAtLogin</key>
+	<true/>
+	<key>moveCursorWithWindow</key>
+	<false/>
+	<key>previewBackgroundAccentOpacity</key>
+	<real>0.0</real>
+	<key>previewVisibility</key>
+	<true/>
+	<key>radialMenuCornerRadius</key>
+	<real>50</real>
+	<key>radialMenuThickness</key>
+	<real>19.782242063492063</real>
+	<key>radialMenuVisibility</key>
+	<true/>
+	<key>trigger</key>
+	<array>
+		<integer>62</integer>
+		<integer>54</integer>
+	</array>
+	<key>useGradient</key>
+	<true/>
+</dict>
+</plist>

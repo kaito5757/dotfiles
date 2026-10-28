@@ -1,0 +1,10 @@
+# Secrets and machine-specific files (never commit)
+.env
+.env.*
+*.local
+*.pem
+*.key
+*.p12
+
+# macOS
+.DS_Store

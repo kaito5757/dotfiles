@@ -1,0 +1,8 @@
+[tools]
+bun = "latest"
+fzf = "latest"
+node = "latest"
+pnpm = "latest"
+python = "latest"
+starship = "latest"
+zoxide = "latest"
