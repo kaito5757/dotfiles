@@ -5,9 +5,9 @@
 <br>
 <br>
 
-**どのMacで目を覚ましても、いつもの机に帰ってこられるように。**
+**どのMacを開いても、いつもの開発環境が待っているように。**
 
-<sub>kaito5757 の開発環境を、1行で。<br>新しいMacにはまるごと。使い込んだMacには、違うところだけを確かめながら。</sub>
+<sub>kaito5757 の開発環境を、コマンド1行で再現します。<br>新しいMacにはひと通り揃え、使い込んだMacでは違うところだけを確認しながら反映します。</sub>
 
 <br>
 <br>
@@ -28,13 +28,13 @@
 
 ## 01 · はじめる
 
-ターミナルに、この1行を。新しいMacでも、使い込んだMacでも同じです。git や Homebrew がまだなくても構いません。
+ターミナルで次のコマンドを実行します。新しいMacでも、使い込んだMacでも同じコマンドです。git や Homebrew が入っていなくても実行できます。
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/kaito5757/dotfiles/main/install.sh | bash
 ```
 
-dotfiles そのものに手を入れたいときは、clone してから。何度実行しても、同じところに落ち着きます。
+dotfiles 自体を編集する場合は、リポジトリを clone してから実行します。何度実行しても、結果は変わりません。
 
 ```bash
 gh repo clone kaito5757/dotfiles ~/dev/personal/kaito5757/dotfiles
@@ -45,36 +45,36 @@ cd ~/dev/personal/kaito5757/dotfiles && ./setup.sh
 ```
 
 > [!NOTE]
-> 迷ったときは Enter。いつも、何も壊さないほうが選ばれます。
+> 迷ったら Enter を押してください。基本的に、今の設定を変えない選択肢が選ばれます。
 
-## 02 · ひらくと起きること
+## 02 · セットアップの流れ
 
-どの手順も、まず全体を一覧で見せて、違うところだけを尋ねます。黙って上書きすることはありません。
+どの手順でも、まず全体を一覧で表示し、違いがある項目だけを確認します。確認なしに上書きすることはありません。
 
-| | 手順 | |
+| | 手順 | 内容 |
 |:-:|---|---|
-| `1` | Homebrew | なければ公式のインストーラーで迎え入れ、Brewfile の足りない分だけを入れる |
-| `2` | 設定ファイル | dotfiles からコピーする。同じなら何もせず、違えば差分を見せて相談する |
-| `3` | mise | node や python などの道具を揃える |
+| `1` | Homebrew | 未導入なら公式インストーラーで導入し、Brewfile の不足分だけをインストールする |
+| `2` | 設定ファイル | dotfiles からコピーする。内容が同じなら何もせず、違う場合は差分を表示して確認する |
+| `3` | mise | node や python などのツールをインストールする |
 | `4` | macOS と Loop | キーリピート、トラックパッド、Dock、Caps Lock、Loop のショートカットを揃える |
-| `5` | アプリ | OrbStack を起こし、Loop の権限の画面を開き、最後に Ghostty へ |
+| `5` | アプリ | OrbStack を起動し、Loop の権限設定画面を開き、最後に Ghostty を開く |
 
-長い処理は静かにスピナーだけを回し、細かな出力は `~/.local/state/dotfiles/logs/` に残します。終わりには、次にやること（ログアウトや各アプリへのログイン）をまとめて置いていきます。
+時間のかかる処理はスピナーだけを表示し、詳細な出力は `~/.local/state/dotfiles/logs/` に保存します。最後に、残りの作業（ログアウトや各アプリへのログインなど）をまとめて表示します。
 
-## 03 · この机にあるもの
+## 03 · 導入されるもの
 
 | | |
 |---|---|
 | シェル | zsh · [Starship](https://starship.rs) · fzf · zoxide · autosuggestions · syntax-highlighting |
-| ターミナル | [Ghostty](https://ghostty.org) — Catppuccin Mocha · JetBrains Mono Nerd Font · カーソルが尾を引くシェーダー |
-| 言語と道具 | [mise](https://mise.jdx.dev) で node · python · bun · pnpm |
-| コマンド | gh · supabase · gum · gitleaks |
+| ターミナル | [Ghostty](https://ghostty.org)（Catppuccin Mocha · JetBrains Mono Nerd Font · カーソルの残像シェーダー） |
+| 言語・ツール | [mise](https://mise.jdx.dev) で node · python · bun · pnpm |
+| CLI | gh · supabase · gum · gitleaks |
 | アプリ | Cursor · OrbStack · TablePlus · Loop · Slack · Discord |
-| macOS | 速めのキーリピート · タップでクリック · 右に隠れる Dock · Caps Lock を Control に |
+| macOS | 速めのキーリピート · タップでクリック · 右側に自動で隠れる Dock · Caps Lock を Control に変更 |
 
-## 04 · 違いに出会ったら
+## 04 · 既存の設定と違うとき
 
-使い込んだMacの設定は、そのMacの歴史です。違いが見つかると、こう尋ねます。
+使い込んだMacの設定には、そのMacで積み重ねてきた調整が残っています。dotfiles と違う設定が見つかると、次のように確認します。
 
 ```text
 ◆  どうしますか？
@@ -85,64 +85,64 @@ cd ~/dev/personal/kaito5757/dotfiles && ./setup.sh
 │    5  今回はスキップ
 ```
 
-`3` を選べば、Git の競合を解くように、違う箇所ごとに「このMac」「dotfiles」「両方」から選べます。置き換える前には必ず `~/.local/state/dotfiles/backups/<日時>/` に控えを残します。
+`3` を選ぶと、Git のコンフリクト解消と同じ要領で、違う箇所ごとに「このMac」「dotfiles」「両方」から選べます。置き換える前には、必ず `~/.local/state/dotfiles/backups/<日時>/` にバックアップを保存します。
 
-## 05 · 秘密のこと
+## 05 · 機密情報の保護
 
-公開しているリポジトリなので、トークンやパスワードは三つの場所で守っています。
+公開リポジトリのため、トークンやパスワードは次の3つの段階で保護しています。
 
-- **コミットのとき** — [gitleaks](https://github.com/gitleaks/gitleaks) が中身を確かめ、見つけたら止める（clone 後に一度 `./setup.sh` を実行すると有効になる）
-- **push のとき** — GitHub の push protection が、既知の形のトークンを受け取らない
-- **画面に映すとき** — 差分にトークンらしき値があれば `[伏せ字]` にして表示する（ファイルの中身はそのまま）
+- **コミット時** — [gitleaks](https://github.com/gitleaks/gitleaks) が内容を検査し、機密情報が見つかればコミットを中止します（clone 後に一度 `./setup.sh` を実行すると有効になります）。
+- **push 時** — GitHub の push protection が、既知の形式のトークンを含む push を拒否します。
+- **画面表示時** — 差分にトークンらしき値があれば、`[伏せ字]` に置き換えて表示します（ファイルの内容は変更しません）。
 
-Macごとの秘密は、`~/.zshrc.local` のようにリポジトリの外へ。
+Mac固有の機密情報は、`~/.zshrc.local` など、リポジトリの外のファイルに書いてください。
 
 <br>
 
 <details>
-<summary><b>06 · 手を入れる</b></summary>
+<summary><b>06 · カスタマイズ</b></summary>
 
-### 設定ファイルを増やす
+### 設定ファイルを追加する
 
-1. ファイルをリポジトリに置く（例：`git/.gitconfig`）
-2. `setup.sh` の `CONFIGS` に `git/.gitconfig|.gitconfig` を1行足す
-3. `./setup.sh` で「最新です」と出るのを確かめてからコミット
+1. ファイルをリポジトリに置きます（例：`git/.gitconfig`）。
+2. `setup.sh` の `CONFIGS` に `git/.gitconfig|.gitconfig` を1行追加します。
+3. `./setup.sh` を実行して「最新です」と表示されることを確認してから、コミットします。
 
-アプリは `Brewfile` に、言語や道具は `mise/config.toml` に。
+アプリは `Brewfile` に、言語・ツールは `mise/config.toml` に追加します。
 
-### macOS の設定を変える
+### macOS の設定を変更する
 
-`macos/defaults.txt` を1行1項目で。今の値は `defaults read <domain> <key>`、型は `defaults read-type <domain> <key>` で確かめられます。
+`macos/defaults.txt` を編集します（1行に1項目）。現在の値は `defaults read <domain> <key>`、型は `defaults read-type <domain> <key>` で確認できます。
 
 ```text
 NSGlobalDomain|KeyRepeat|float|2|キーリピートの速度（小さいほど速い）
 ```
 
-### Loop の設定を持ち帰る
+### Loop の設定を取り込む
 
-Loop の画面で設定を変えたら、これを実行してからコミット。管理している項目だけを取り込みます。
+Loop の設定画面で変更したら、次のコマンドを実行してからコミットします。管理対象の項目だけを取り込みます。
 
 ```bash
 ./scripts/export-loop.sh
 ```
 
-### MacBook と Mac Studio で変えたいとき
+### MacBook と Mac Studio で設定を分ける
 
-コピーで配っているので、各Macで直接書き換えて構いません。次の `./setup.sh` で「既存の設定を残す」を選べば、そのまま残ります。毎回尋ねられたくない部分は、別のファイルに分けて読み込みます。
+設定ファイルはコピーで配置しているため、各Macで直接編集して問題ありません。次回 `./setup.sh` を実行したときに「既存の設定を残す」を選べば、編集した内容はそのまま残ります。毎回確認されたくない部分は、別のファイルに分けて読み込みます。
 
 ```bash
 # ~/.zshrc（dotfiles 側）の末尾
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 ```
 
-Ghostty なら `config-file = ?local.config`（`?` を付けると、ファイルがなくても止まらない）。
+Ghostty の場合は `config-file = ?local.config` と書きます（先頭に `?` を付けると、ファイルがなくてもエラーになりません）。
 
 </details>
 
 <details>
-<summary><b>07 · 困ったとき</b></summary>
+<summary><b>07 · トラブルシューティング</b></summary>
 
-### 控えから戻す
+### バックアップから復元する
 
 ```bash
 ls ~/.local/state/dotfiles/backups/
@@ -152,13 +152,13 @@ ls ~/.local/state/dotfiles/backups/
 cp -p ~/.local/state/dotfiles/backups/<日時>/.config/ghostty/config ~/.config/ghostty/config
 ```
 
-シンボリックリンクだったものは、`cp` ではなく `mv` で戻します。
+シンボリックリンクを復元する場合は、`cp` ではなく `mv` を使います。
 
-### 何が起きたかを見る
+### ログを確認する
 
-細かな出力は `~/.local/state/dotfiles/logs/<日時>.log` に。失敗したときは、その最後の部分が画面にも出ます。
+詳細な出力は `~/.local/state/dotfiles/logs/<日時>.log` に保存されます。失敗した場合は、ログの末尾が画面にも表示されます。
 
-### Caps Lock を元に戻す
+### Caps Lock の設定を元に戻す
 
 ```bash
 launchctl bootout gui/$(id -u)/local.dotfiles.capslock-to-control
@@ -172,25 +172,25 @@ rm ~/Library/LaunchAgents/local.dotfiles.capslock-to-control.plist
 hidutil property --set '{"UserKeyMapping":[]}'
 ```
 
-### そのほか
+### その他
 
-- **途中でやめたい** — Ctrl-C で。置き換えは一時ファイルからの `mv` なので、書きかけのファイルは残りません。
-- **シンボリックリンクがあった** — 勝手には上書きしません。置き換えるのはリンクだけで、リンク先には触れません。
-- **色を消したい** — `NO_COLOR=1 ./setup.sh`
-- **矢印キーで選びたい** — gum（Brewfile に入っています）があれば、自然とそうなります。
+- **途中でやめたい** — Ctrl-C で中断できます。ファイルの置き換えは一時ファイルからの `mv` で行うため、書きかけのファイルは残りません。
+- **シンボリックリンクがある** — 確認なしに上書きはしません。置き換える場合も、対象はリンク自体だけです。リンク先のファイルは変更しません。
+- **色を表示したくない** — `NO_COLOR=1 ./setup.sh` で実行します。
+- **矢印キーで選びたい** — gum（Brewfile に含まれています）がインストールされていれば、自動で矢印キーのメニューになります。
 
 </details>
 
 <details>
-<summary><b>08 · 構成</b></summary>
+<summary><b>08 · ディレクトリ構成</b></summary>
 
 ```text
 dotfiles/
-├── install.sh            # curl | bash 用。一時フォルダに落として setup.sh を実行
+├── install.sh            # curl | bash 用。一時フォルダにダウンロードして setup.sh を実行
 ├── setup.sh              # 5つの手順の本体
-├── Brewfile              # アプリとコマンド
+├── Brewfile              # アプリと CLI
 ├── scripts/
-│   ├── install-config.sh # 表示・質問・コピー・統合
+│   ├── install-config.sh # 表示・確認・コピー・統合
 │   ├── apply-defaults.sh # macOS と Loop の設定
 │   └── export-loop.sh    # Loop の設定を dotfiles に取り込む
 ├── macos/                # defaults.txt · loop.plist · Caps Lock 用の LaunchAgent
@@ -198,7 +198,7 @@ dotfiles/
 ├── ghostty/              # config · shaders/cursor_smear.glsl
 ├── starship/             # starship.toml
 ├── mise/                 # config.toml
-├── docs/                 # README の絵
+├── docs/                 # README 用の画像
 └── .githooks/pre-commit  # gitleaks
 ```
 
